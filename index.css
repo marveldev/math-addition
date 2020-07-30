@@ -1,0 +1,181 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #018f94;
+}
+
+h1 {
+  margin-bottom: 50px;
+  font-size: 2em;
+  text-align: center;
+}
+
+.content {
+  width: 50%;
+  margin: auto;
+  background-color: #28a57b7c;
+  padding: 2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.first-value,.second-value {
+  padding: 0.3em 1em;
+  border: 2px solid black;
+  font-size: 1.5em;
+}
+
+.span-add,.span-equal {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 2em;
+}
+
+.input {
+  padding: 0.5em 0.2em;
+  border: none;
+}
+
+.button-check {
+  margin-left: 0.2em;
+  padding: 0.5em 0.8em;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+
+.button-check:hover,.button-container>button:hover {
+  background-color: #5f9ea0;
+  color: #faebd7;
+}
+
+.button-check:active,.button-container>button:active {
+  transform: translateY(4px);
+}
+
+
+.button-container>button {
+  padding: 0.5em 0.8em;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  margin: 0 0.2em;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.span-correct {
+  display: none;
+  width: fit-content;
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  padding: 0 0.3em;
+  font-size: 1.5em; 
+  background-color: #27aa27ed;
+}
+
+.span-wrong {
+  display: none;
+  width: fit-content;
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  padding: 0 0.3em;
+  font-size: 1.5em; 
+  background-color: #b65c4ced;
+} 
+
+.button-next,.button-reveal,.button {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+  .span-add,.span-equal {
+    margin: 0.5em;
+  }
+
+  .first-value,.second-value {
+    padding: 0.2em 0.8em;
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    width: 70%;
+    padding: 1.5em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .content {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 1.4em;
+  }
+
+  .first-value,.second-value {
+    padding: 0.15em 0.6em;
+    font-size: 1em;
+  }
+
+  .input {
+    padding: 0.5em 0.3em;
+    width: 6em;
+  }
+
+  .span-add,.span-equal {
+    margin: 0.2em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .content {
+    width: 75%;
+  }
+
+  h1 {
+    font-size: 1.1em;
+  }
+
+  .input {
+    width: 8em;
+  }
+
+  .button-check {
+    margin-left: 17em;
+    margin-top: 0.6em;
+    font-size: 0.7em;
+    padding: 0.3em 0.5em;
+  }
+
+  .button-container {
+    margin-top: 1em;
+  }
+
+  .button-container>button {
+    padding: 0.3em 0.5em;
+    margin: 0 0.1em;
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .input {
+    width: 6em;
+  }
+
+  .button-check {
+    margin-left: 15em;
+  }
+
+  .span-add,.span-equal {
+    margin: 0.1em;
+  }
+}
