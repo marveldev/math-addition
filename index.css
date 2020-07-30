@@ -180,8 +180,12 @@ h1 {
   }
 }
 
-@media screen and (max-width: 308px) {
+@media screen and (max-width: 319px) {
   .input {
-    width: 4em;
+    width: 3em;
+  }
+  
+  .button-check {
+    margin-left: 0;
   }
 }
