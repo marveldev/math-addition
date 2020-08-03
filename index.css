@@ -19,13 +19,13 @@ h1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.first-value,.second-value {
+.value {
   padding: 0.3em 1em;
   border: 2px solid black;
   font-size: 1.5em;
 }
 
-.span-add,.span-equal {
+.sign {
   font-size: 1.5em;
   font-weight: bold;
   margin: 2em;
@@ -36,7 +36,7 @@ h1 {
   border: none;
 }
 
-.button-check {
+.confirm-button {
   margin-left: 0.2em;
   padding: 0.5em 0.8em;
   cursor: pointer;
@@ -45,17 +45,17 @@ h1 {
   font-weight: bold;
 }
 
-.button-check:hover,.button-container>button:hover {
+.confirm-button:hover,.button-container>button:hover {
   background-color: #5f9ea0;
   color: #faebd7;
 }
 
-.button-check:active,.button-container>button:active {
+.confirm-button:active,.button-container>button:active {
   transform: translateY(4px);
 }
 
-
 .button-container>button {
+  visibility: hidden;
   padding: 0.5em 0.8em;
   cursor: pointer;
   border: none;
@@ -69,36 +69,29 @@ h1 {
   margin-top: 2em;
 }
 
-.span-correct {
+.message {
   display: none;
   width: fit-content;
   margin-top: 0;
   margin-bottom: 0.8em;
   padding: 0 0.3em;
   font-size: 1.5em; 
+}
+
+.correct {
   background-color: #27aa27ed;
 }
 
-.span-wrong {
-  display: none;
-  width: fit-content;
-  margin-top: 0;
-  margin-bottom: 0.8em;
-  padding: 0 0.3em;
-  font-size: 1.5em; 
+.wrong {
   background-color: #b65c4ced;
 } 
 
-.button-next,.button-reveal,.button {
-  visibility: hidden;
-}
-
 @media screen and (max-width: 1024px) {
-  .span-add,.span-equal {
+  .sign {
     margin: 0.5em;
   }
 
-  .first-value,.second-value {
+  .value {
     padding: 0.2em 0.8em;
     font-size: 1.3em;
   }
@@ -120,7 +113,7 @@ h1 {
     font-size: 1.4em;
   }
 
-  .first-value,.second-value {
+  .value {
     padding: 0.15em 0.6em;
     font-size: 1em;
   }
@@ -130,7 +123,7 @@ h1 {
     width: 6em;
   }
 
-  .span-add,.span-equal {
+  .sign {
     margin: 0.2em;
   }
 }
@@ -148,7 +141,7 @@ h1 {
     width: 8em;
   }
 
-  .button-check {
+  .confirm-button {
     margin-left: 17em;
     margin-top: 0.6em;
     font-size: 0.7em;
@@ -171,11 +164,11 @@ h1 {
     width: 6em;
   }
 
-  .button-check {
+  .confirm-button {
     margin-left: 15em;
   }
 
-  .span-add,.span-equal {
+  .sign {
     margin: 0.1em;
   }
 }
@@ -185,7 +178,7 @@ h1 {
     width: 3em;
   }
   
-  .button-check {
+  .confirm-button {
     margin-left: 0;
   }
 }

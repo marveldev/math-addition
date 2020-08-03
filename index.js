@@ -1,38 +1,38 @@
-const buttonNext = document.querySelector('.button-next');
-const firstValue = document.querySelector('.first-value');
-const secondValue = document.querySelector('.second-value');
-const button = document.querySelector('.button');
-const buttonCheck = document.querySelector('.button-check');
-const buttonReveal = document.querySelector('.button-reveal');
+const nextQuestionButton = document.querySelector('.next-button');
+const firstValue = document.querySelector('.first');
+const secondValue = document.querySelector('.second');
+const repeatQuestionButton = document.querySelector('.repeat-button');
+const confirmButton = document.querySelector('.confirm-button');
+const revealAnswerButton = document.querySelector('.reveal-button');
 const input = document.querySelector('.input');
 
-buttonNext.addEventListener('click', () => {
+nextQuestionButton.addEventListener('click', () => {
   input.value = '';
   const newFirstValue = Math.floor((Math.random() * 1000) + 1);
   firstValue.innerHTML = newFirstValue;
   const newSecondValue = Math.floor((Math.random() * 1000) + 1);
   secondValue.innerHTML = newSecondValue;
-  document.querySelector('.span-correct').style.display = 'none';
-  buttonReveal.style.visibility = 'hidden';
-  buttonNext.style.visibility = 'hidden';
-  button.style.visibility = 'hidden';
+  document.querySelector('.correct').style.display = 'none';
+  revealAnswerButton.style.visibility = 'hidden';
+  nextQuestionButton.style.visibility = 'hidden';
+  repeatQuestionButton.style.visibility = 'hidden';
   input.style.backgroundColor = 'white';
 })
 
-buttonCheck.addEventListener('click', () => {
+confirmButton.addEventListener('click', () => {
   if (input.value.length >= 1) {
     const result = parseFloat(firstValue.innerHTML) + parseFloat(secondValue.innerHTML);
     if (input.value == result) {
-      document.querySelector('.span-correct').style.display = 'block';
-      buttonNext.style.visibility = 'visible';
-      buttonReveal.style.visibility = 'hidden';
-      document.querySelector('.span-wrong').style.display = 'none';
-      button.style.visibility = 'hidden';
+      document.querySelector('.correct').style.display = 'block';
+      nextQuestionButton.style.visibility = 'visible';
+      revealAnswerButton.style.visibility = 'hidden';
+      document.querySelector('.wrong').style.display = 'none';
+      repeatQuestionButton.style.visibility = 'hidden';
       input.style.backgroundColor = 'white';
     } else {
-      document.querySelector('.span-wrong').style.display = 'block';
-      buttonReveal.style.visibility = 'visible';
-      button.style.visibility = 'visible';
+      document.querySelector('.wrong').style.display = 'block';
+      revealAnswerButton.style.visibility = 'visible';
+      repeatQuestionButton.style.visibility = 'visible';
       input.style.backgroundColor = 'white';
     }
   } else {
@@ -40,20 +40,20 @@ buttonCheck.addEventListener('click', () => {
   }
 })
 
-buttonReveal.addEventListener('click', () => {
+revealAnswerButton.addEventListener('click', () => {
   const result = parseFloat(firstValue.innerHTML) + parseFloat(secondValue.innerHTML);
   input.value = result;
   input.style.backgroundColor = '#99ff13f5';
-  document.querySelector('.span-wrong').style.display = 'none';
-  document.querySelector('.span-correct').style.display = 'none';
-  buttonNext.style.visibility = 'visible';
+  document.querySelector('.wrong').style.display = 'none';
+  document.querySelector('.correct').style.display = 'none';
+  nextQuestionButton.style.visibility = 'visible';
 })
 
-button.addEventListener('click', () => {
+repeatQuestionButton.addEventListener('click', () => {
   input.style.backgroundColor = 'white';
-  buttonReveal.style.visibility = 'hidden';
-  document.querySelector('.span-wrong').style.display = 'none';
-  buttonNext.style.visibility = 'hidden';
-  button.style.visibility = 'hidden';
+  revealAnswerButton.style.visibility = 'hidden';
+  document.querySelector('.wrong').style.display = 'none';
+  nextQuestionButton.style.visibility = 'hidden';
+  repeatQuestionButton.style.visibility = 'hidden';
   input.value = '';
 })
