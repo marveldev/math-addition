@@ -14,7 +14,7 @@ h1 {
 .content {
   width: 50%;
   margin: auto;
-  background-color: #28a57b7c;
+  background-color: #b3c8c17c;
   padding: 2em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -43,6 +43,11 @@ h1 {
   border: none;
   outline: none;
   font-weight: bold;
+}
+
+.confirm-button:focus,
+.button-container>button:focus {
+  border: 1.5px solid black;
 }
 
 .confirm-button:hover,.button-container>button:hover {
@@ -79,11 +84,13 @@ h1 {
 }
 
 .correct {
-  background-color: #27aa27ed;
+ color: #047404;
+ font-weight: bold;
 }
 
 .wrong {
-  background-color: #b65c4ced;
+ color: #ce2222;
+ font-weight: bold;
 } 
 
 @media screen and (max-width: 1024px) {
