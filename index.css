@@ -6,91 +6,95 @@ body {
 }
 
 h1 {
-  margin-bottom: 50px;
-  font-size: 2em;
+  font-size: 2.5em;
   text-align: center;
 }
 
 .content {
-  width: 50%;
+  width: 60%;
+  height: auto;
   margin: auto;
   background-color: #b3c8c17c;
-  padding: 2em;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 3em 2em 1.5em 2em;
+  box-shadow: 0 4px 8px 0 #00000033;
 }
 
-.value {
+#firstValue {
   padding: 0.3em 1em;
   border: 2px solid black;
-  font-size: 1.5em;
+  font-size: 2em;
+}
+
+#secondValue {
+  padding: 0.3em 1em;
+  border: 2px solid black;
+  font-size: 2em;
 }
 
 .sign {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin: 2em;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0 2em;
 }
 
-.input {
-  padding: 0.5em 0.2em;
+.input-form {
+  display: inline;
+}
+
+#input {
+  font-size: 1.5em;
+  height: 2.5em;
+  width: 7em;
+  padding: 0 1em;
   border: none;
 }
 
-.confirm-button {
-  margin-left: 0.2em;
-  padding: 0.5em 0.8em;
+#confirmButton {
+  display: block;
+  margin: 1em 0 0 auto;
+  height: 2em;
+  width: 5em;
   cursor: pointer;
   border: none;
-  outline: none;
-  font-weight: bold;
+  font-size: 1.2em;
+  font-weight: 700;
 }
 
-.confirm-button:focus,
-.button-container>button:focus {
-  border: 1.5px solid black;
-}
-
-.confirm-button:hover,.button-container>button:hover {
-  background-color: #5f9ea0;
-  color: #faebd7;
-}
-
-.confirm-button:active,.button-container>button:active {
+.content button:active {
   transform: translateY(4px);
 }
 
 .button-container>button {
-  visibility: hidden;
-  padding: 0.5em 0.8em;
+  display: none;
+  height: 2.2em;
+  width: 8em;
   cursor: pointer;
   border: none;
-  outline: none;
-  font-weight: bold;
-  margin: 0 0.2em;
+  font-weight: 700;
+  font-size: 1.2em;
+  /* margin: 1em auto; */
 }
 
 .button-container {
   text-align: center;
-  margin-top: 2em;
+  margin: 1em auto;
+  /* margin-top: 1em; */
 }
 
-.message {
+#correctMessage {
   display: none;
-  width: fit-content;
-  margin-top: 0;
-  margin-bottom: 0.8em;
-  padding: 0 0.3em;
-  font-size: 1.5em; 
+  color: #03520d;
+  font-weight: 700;
+  font-size: 1.8em;
+  margin: 0 0 1em 0;
 }
 
-.correct {
- color: #047404;
- font-weight: bold;
-}
-
-.wrong {
- color: #ce2222;
- font-weight: bold;
+#wrongMessage {
+  display: none;
+  color: #b30101;
+  font-weight: 700;
+  font-size: 1.8em;
+  margin: 0 0 1em 0; 
 } 
 
 @media screen and (max-width: 1024px) {

@@ -7,24 +7,26 @@
     <link rel="stylesheet" href="./index.css">
   </head>
   <body>
-    <section class="container">
+    <section>
       <h1>YAH! LET'S PRACTISE OUR MATH ADDITION</h1>
       <section class="content">
-        <p class="correct message">correct</p>
-        <p class="wrong message">wrong</p>
-        <span class="first value">2</span>
-        <span class="sign">+</span>
-        <span class="second value">2</span>
-        <span class="sign">=</span>
-        <input type="number" class="input" placeholder="result..."></input>
-        <button class="confirm-button">Check</button>
+        <p id="correctMessage">correct</p>
+        <p id="wrongMessage">wrong</p>
+        <span id="firstValue">2</span>
+        <span class="plus sign">+</span>
+        <span id="secondValue">2</span>
+        <span class="equals sign">=</span>
+        <form class="input-form">
+          <input type="number" id="input" placeholder="result..." required></input>
+          <button id="confirmButton">Check</button>
+        </form>
         <div class="button-container">
-          <button class="repeat-button">Try Again</button>
-          <button class="reveal-button">Show Answer</button>
-          <button class="next-button">Next Question</button>
+          <button id="repeatButton">Try Again</button>
+          <button id="answerButton">Show Answer</button>
+          <button id="nextQtnButton">Next Question</button>
         </div> 
       </section>
     </section>
-    <script src="./index.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
   </body>
 </html>
