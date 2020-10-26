@@ -15,7 +15,7 @@ h1 {
   height: auto;
   margin: auto;
   background-color: #b3c8c17c;
-  padding: 3em 2em 1.5em 2em;
+  padding: 3em 2em 1.5em 5em;
   box-shadow: 0 4px 8px 0 #00000033;
 }
 
@@ -51,7 +51,7 @@ h1 {
 
 #confirmButton {
   display: block;
-  margin: 1em 0 0 auto;
+  margin: 1em 3em 0 auto;
   height: 2em;
   width: 5em;
   cursor: pointer;
@@ -72,13 +72,11 @@ h1 {
   border: none;
   font-weight: 700;
   font-size: 1.2em;
-  /* margin: 1em auto; */
 }
 
 .button-container {
   text-align: center;
   margin: 1em auto;
-  /* margin-top: 1em; */
 }
 
 #correctMessage {
