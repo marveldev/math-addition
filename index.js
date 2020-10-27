@@ -7,13 +7,13 @@ const addEventListeners = () => {
   const showAnswerButton = document.querySelector('#answerButton');
   const input = document.querySelector('#input');
 
-  const addNumbers = () => {
+  addNumbers = () => {
     const result = parseFloat(firstValue.innerText) + parseFloat(secondValue.innerText);
     input.value = result;
     return result;
   }
   
-  const generateNumbers = () => {
+  generateNumbers = () => {
     const newFirstValue = Math.floor((Math.random() * 1000) + 1);
     firstValue.innerText = newFirstValue;
     const newSecondValue = Math.floor((Math.random() * 1000) + 1);
@@ -56,5 +56,6 @@ const addEventListeners = () => {
     nextQuestionButton.style.display = 'inline-block';
   })
 }
+// addEventListeners();
 
-module.exports = { addEventListeners, addNumbers() };
+module.exports = { addEventListeners };
