@@ -1,15 +1,6 @@
-const { addEventListeners } = require('./index');
+const { addNumbers, generateNumbers } = require('./index');
 
-// const addNumbers = (firstValue, secondValue) => {
-//   const result = firstValue + secondValue;
-//   return result;
-// }
-
-// test('sum of two numbers', () => {
-//   expect(addNumbers(10,10)).toBe(20)
-// })
-
-test('event listeners', () => {
+test('sum of two numbers', () => {
   document.body.innerHTML  = `
     <section class="content">
       <p id="correctMessage">correct</p>
@@ -29,18 +20,9 @@ test('event listeners', () => {
       </div> 
     </section>
   `
-  expect(addEventListeners()).not.toBeNull();
-})
-
-test('sum of two numbers', () => {
   expect(addNumbers()).not.toBeNull();
 })
 
 test('generate random numbers', () => {
   expect(generateNumbers()).not.toBeNull();
 })
-
-test('display next random numbers', () => {
-  expect(nextQuestionButton()).not.toBeNull();
-})
-
